@@ -1,0 +1,25 @@
+version: "3.4"
+
+services:
+  php-nginx:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: ${IMAGES_PREFIX:-}app-php
+    restart: unless-stopped
+    volumes:
+      - symfony_demo_vol:/var/www/symfony/
+      # - npm-cache:/root/.npm
+    ports:
+      - '8080:8080'
+    healthcheck:
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  # database_data:
+  symfony_demo_vol:
+  # npm-cache:
+  #   external: false
