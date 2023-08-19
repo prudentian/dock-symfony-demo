@@ -20,18 +20,22 @@ Components
 Installation
 ------------
 
-1. Clone this repo. Go inside folder `docker`
+1. Clone this repo. Go to project folder
 2. Run `docker compose build --no-cache` to build fresh images
-3. Run `docker compose up --pull --wait` to start the application
+3. Run `docker compose up --pull --wait` to start the application 
 
-#### Stop application
-Run `docker compose down --remove-orphans` to stop the Docker containers
-
+Wait for about a minute for the application to be initialized
 
 Usage
 -----
 
-Access the application in your browser at the given URL (<http://localhost:8000> by default).
+Access the application in your browser at the given URL (<//http://localhost:8080/> ).
+
+You should see the demo landing page ....
+`Welcome to the Symfony Demo application`
+
+#### Stop application
+Run `docker compose down --remove-orphans` to stop the Docker containers
 
 
 License
